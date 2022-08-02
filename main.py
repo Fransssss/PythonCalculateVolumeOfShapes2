@@ -84,7 +84,8 @@ while choice != 'e':
             print("Input the height: ", end=" ")
             p_height = int(input())
             prism = Prism(p_base, p_height, place_holder)
-            print("\n[ The volume of prism: " + str(prism.volume()) + " ]")
+            prism_volume = "{:.2f}".format(prism.volume())           # only 2 digits after comma / decimal number
+            print("\n[ The volume of prism: " + str(prism_volume) + " ]")
         except ValueError:
             print("\n[ invalid input - Digit only ]")
 
@@ -94,19 +95,21 @@ while choice != 'e':
             print("Input the radius (half of diameter): ", end=" ")
             s_rad = int(input())
             sphere = Sphere(place_holder, place_holder, s_rad, pi_value)
-            print("\n[ The volume of sphere: " + str(sphere.volume()) + " ]")
+            sphere_volume = "{:.2f}".format(sphere.volume())
+            print("\n[ The volume of sphere: " + str(sphere_volume) + " ]")
         except ValueError:
             print("\n[ Invalid input - Digit only ]")
 
     elif choice == '3':
         print("\n[ Pyramid ]\n")
-        try:                                     # WHAT IF YOU PUT IMAGE HERE ?
+        try:                                    
             print("Input the base: ", end=" ")
             py_base = int(input())
             print("Input the height: ", end=" ")
             py_height = int(input())
             pyramid = Pyramid(py_base, py_height, place_holder)
-            print("\n[ The volume of pyramid: " + str(pyramid.volume()) + " ]")
+            pyramid_volume = "{:.2f}".format(pyramid.volume())
+            print("\n[ The volume of pyramid: " + str(pyramid_volume) + " ]")
         except ValueError:
             print("\n[ Invalid input - Digit only ]")
 
@@ -118,7 +121,8 @@ while choice != 'e':
             print("Input the height: ", end=" ")
             rcc_height = int(input())
             right_circular_cone = RightCircularCone(place_holder, rcc_height, rcc_radius, pi_value)
-            print("\n[ The volume of right circular cone: " + str(right_circular_cone.volume()) + " ]")
+            rcc_volume = "{:.2f}".format(right_circular_cone.volume())
+            print("\n[ The volume of right circular cone: " + str(rcc_volume) + " ]")
         except ValueError:
             print("\n[ Invalid input - Digit only ]")
 
@@ -132,7 +136,8 @@ while choice != 'e':
             print("input the height: ", end=" ")
             s_height = int(input())
             square = Square(place_holder, s_height, place_holder, s_len, s_wid)
-            print("\n[ The volume of square: " + str(square.volume()) + " ]")
+            square_volume = "{:.2f}".format(square.volume())
+            print("\n[ The volume of square: " + str(square_volume) + " ]")
         except ValueError:
             print("\n[ Invalid input - Digit only ]")
 
